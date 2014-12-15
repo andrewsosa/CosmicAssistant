@@ -1,0 +1,185 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_white_24dp"
+        fab:fab_colorNormal="@color/pink_A200"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <!-- <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?android:attr/windowBackground"
+            app:pstsPaddingMiddle="false"
+            app:pstsShouldExpand="true"
+            app:pstsUnderlineColor="@android:color/transparent"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity"/>
+    </LinearLayout> -->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DashboardActivity"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="196dp"
+            android:background="@color/grey_50"
+            android:elevation="4dp"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="00"
+                android:id="@+id/sumValue"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/grey_700"
+                android:textSize="56dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/currentType"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/grey_500"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/currentValue"
+                android:textColor="@color/grey_500"
+                android:textSize="24sp"
+                android:layout_alignTop="@+id/currentType"
+                android:layout_alignEnd="@+id/sumValue" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <android.support.v4.widget.DrawerLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/my_drawer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <com.andrewsosa.cosmicassistant.NoSwipeViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:layout_toStartOf="@+id/linearLayout" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="72dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="false"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/linearLayout"
+                        android:background="@color/grey_700"
+                        android:elevation="1dp">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text="Ships"
+                            android:id="@+id/btnShips"
+                            android:layout_weight="1"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:fontFamily="sans-serif-light" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text="Attack"
+                            android:id="@+id/btnAttack"
+                            android:layout_weight="1"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:fontFamily="sans-serif-light" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text="Kicker"
+                            android:id="@+id/btnKicker"
+                            android:layout_weight="1"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:fontFamily="sans-serif-light" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text="Reinf."
+                            android:id="@+id/btnReinforcements"
+                            android:layout_weight="1"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:fontFamily="sans-serif-light" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text="Misc."
+                            android:id="@+id/btnMisc"
+                            android:layout_weight="1"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:fontFamily="sans-serif-light" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="276dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:background="@color/pink_A200"></LinearLayout>
+
+            </android.support.v4.widget.DrawerLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
