@@ -108,13 +108,27 @@ public class CardBuilder extends Fragment {
 
         public void numberHandler(int i) {
 
-            currentValue.append(i);
-            updateHandler();
+            if(currentValue.length() < 2) {
+                currentValue.append(i);
+                updateDisplay();
+            }
+            else if((currentValue.length() == 2) && (currentValue.charAt(0) == '-')) {
+                currentValue.append(i);
+                updateDisplay();
+            }
+
         }
 
         public void deleteHandler() {
+
+            // Regular delete last element
             if(currentValue.length() > 0) currentValue.deleteCharAt(currentValue.length() - 1);
-            updateHandler();
+
+            // Remove negative if only negative left
+            else if((currentValue.length() == 1) && (currentValue.charAt(0) == '-'))
+                currentValue.deleteCharAt(0);
+
+            updateDisplay();
         }
 
         public void inverseHandler() {
@@ -125,11 +139,11 @@ public class CardBuilder extends Fragment {
                 currentValue.insert(0, '-');
             }
 
-            updateHandler();
+            updateDisplay();
 
         }
 
-        public void updateHandler() {
+        public void updateDisplay() {
             DashboardActivity.updateCurrentValue(currentValue.toString());
         }
     }
@@ -145,9 +159,16 @@ public class CardBuilder extends Fragment {
         }
 
         public void doneHandler() {
-            Card card = Card.newInstance(currentType, Integer.parseInt(currentValue.toString()));
-            CardList.addCard(card);
 
+            Card card;
+
+            try {
+                card = Card.newInstance(currentType, Integer.parseInt(currentValue.toString()));
+            } catch (Exception e) {
+                card = Card.newInstance(currentType, 0);
+            }
+
+            CardList.addCard(card);
             cancelHandler();
         }
 

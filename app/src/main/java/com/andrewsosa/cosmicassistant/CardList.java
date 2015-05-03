@@ -77,17 +77,24 @@ public class CardList extends Fragment {
 
         public Integer sumElements() {
             Integer sum = 0;
+            Integer encounter = 0;
+            Integer kicker = 1;
 
             for(Card c : cards) {
                 if (c != null) {
-                    if(!c.getCardType().equals("Kicker"))
-                        sum = sum + c.getCardValue();
-                    else sum = sum * c.getCardValue();
+
+                    if(c.getCardType().equals("Kicker")) {
+                        kicker = c.getCardValue();
+                    }
+                    else if(c.getCardType().equals("Attack")) {
+                        encounter = encounter + c.getCardValue();
+                    }
+                    else sum = sum + c.getCardValue();
                 }
 
             }
 
-            return sum;
+            return sum + (encounter * kicker);
         }
 
         @Override

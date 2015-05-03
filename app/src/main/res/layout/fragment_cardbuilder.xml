@@ -26,7 +26,7 @@ android:layout_toStartOf="@+id/linearLayout">
                 android:id="@+id/btn7"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
-                android:textSize="22sp"
+                android:textSize="@dimen/cardbuilder_button_font_size"
                 android:background="?android:attr/selectableItemBackground" />
 
             <Button
@@ -36,7 +36,7 @@ android:layout_toStartOf="@+id/linearLayout">
                 android:id="@+id/btn8"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
-                android:textSize="22sp"
+                android:textSize="@dimen/cardbuilder_button_font_size"
                 android:background="?android:attr/selectableItemBackground" />
 
             <Button
@@ -46,7 +46,7 @@ android:layout_toStartOf="@+id/linearLayout">
                 android:id="@+id/btn9"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
-                android:textSize="22sp"
+                android:textSize="@dimen/cardbuilder_button_font_size"
                 android:background="?android:attr/selectableItemBackground" />
         </TableRow>
 
@@ -62,7 +62,7 @@ android:layout_toStartOf="@+id/linearLayout">
                 android:id="@+id/btn4"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
-                android:textSize="22sp"
+                android:textSize="@dimen/cardbuilder_button_font_size"
                 android:background="?android:attr/selectableItemBackground" />
 
             <Button
@@ -72,7 +72,7 @@ android:layout_toStartOf="@+id/linearLayout">
                 android:id="@+id/btn5"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
-                android:textSize="22sp"
+                android:textSize="@dimen/cardbuilder_button_font_size"
                 android:background="?android:attr/selectableItemBackground" />
 
             <Button
@@ -82,7 +82,7 @@ android:layout_toStartOf="@+id/linearLayout">
                 android:id="@+id/btn6"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
-                android:textSize="22sp"
+                android:textSize="@dimen/cardbuilder_button_font_size"
                 android:background="?android:attr/selectableItemBackground" />
         </TableRow>
 
@@ -98,7 +98,7 @@ android:layout_toStartOf="@+id/linearLayout">
                 android:id="@+id/btn1"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
-                android:textSize="22sp"
+                android:textSize="@dimen/cardbuilder_button_font_size"
                 android:background="?android:attr/selectableItemBackground" />
 
             <Button
@@ -108,7 +108,7 @@ android:layout_toStartOf="@+id/linearLayout">
                 android:id="@+id/btn2"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
-                android:textSize="22sp"
+                android:textSize="@dimen/cardbuilder_button_font_size"
                 android:background="?android:attr/selectableItemBackground" />
 
             <Button
@@ -118,7 +118,7 @@ android:layout_toStartOf="@+id/linearLayout">
                 android:id="@+id/btn3"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
-                android:textSize="22sp"
+                android:textSize="@dimen/cardbuilder_button_font_size"
                 android:background="?android:attr/selectableItemBackground" />
         </TableRow>
 
@@ -134,7 +134,7 @@ android:layout_toStartOf="@+id/linearLayout">
                 android:id="@+id/btnMinus"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
-                android:textSize="22sp"
+                android:textSize="@dimen/cardbuilder_button_font_size"
                 android:background="?android:attr/selectableItemBackground" />
 
             <Button
@@ -144,7 +144,7 @@ android:layout_toStartOf="@+id/linearLayout">
                 android:id="@+id/btn0"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
-                android:textSize="22sp"
+                android:textSize="@dimen/cardbuilder_button_font_size"
                 android:background="?android:attr/selectableItemBackground" />
 
             <Button
@@ -154,7 +154,7 @@ android:layout_toStartOf="@+id/linearLayout">
                 android:id="@+id/btnDelete"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
-                android:textSize="22sp"
+                android:textSize="@dimen/cardbuilder_button_font_size"
                 android:background="?android:attr/selectableItemBackground" />
         </TableRow>
     </TableLayout>

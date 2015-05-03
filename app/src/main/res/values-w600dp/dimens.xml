@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+
+    <dimen name="cardbuilder_button_font_size">34sp</dimen>
+    <dimen name="card_menu_width">108dp</dimen>
+
+
+
+
+</resources>

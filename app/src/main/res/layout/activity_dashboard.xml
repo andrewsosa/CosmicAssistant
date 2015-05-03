@@ -110,7 +110,7 @@
 
                     <LinearLayout
                         android:orientation="vertical"
-                        android:layout_width="72dp"
+                        android:layout_width="@dimen/card_menu_width"
                         android:layout_height="fill_parent"
                         android:layout_alignParentLeft="false"
                         android:layout_alignParentTop="true"
@@ -170,12 +170,13 @@
                     </LinearLayout>
                 </RelativeLayout>
 
+                <!--
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="276dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="right"
-                    android:background="@color/pink_A200"></LinearLayout>
+                    android:background="@color/pink_A200"></LinearLayout> -->
 
             </android.support.v4.widget.DrawerLayout>
         </LinearLayout>
